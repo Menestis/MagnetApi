@@ -1,6 +1,5 @@
 package fr.blendman.magnet.api.server;
 
-import fr.blendman.skynet.models.ServerLoginPlayerInfo;
 
 import java.util.UUID;
 
@@ -8,7 +7,6 @@ import java.util.UUID;
  * @author Blendman974
  */
 public interface ServerCacheHandler {
-    void storeInfo(UUID uniqueId, ServerLoginPlayerInfo info);
 
     ServerLoginPlayerInfo getInfo(UUID uniqueId);
 

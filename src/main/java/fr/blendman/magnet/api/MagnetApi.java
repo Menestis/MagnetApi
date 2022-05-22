@@ -2,9 +2,6 @@ package fr.blendman.magnet.api;
 
 import fr.blendman.magnet.api.handles.messenger.MessengerHandle;
 import fr.blendman.magnet.api.handles.transactions.TransactionsHandle;
-import fr.blendman.skynet.api.*;
-import fr.blendman.skynet.client.ApiClient;
-import fr.blendman.skynet.models.Server;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -22,19 +19,21 @@ public interface MagnetApi {
 
     UUID getServerId();
 
-    ApiClient getClient();
+    CompletableFuture<Integer> getPlayerCount();
 
-    ProxyApi getProxyApi();
-
-    ServerApi getServerApi();
-
-    Server getServer();
-
-    PlayerApi getPlayerApi();
-
-    LoginApi getLoginApi();
-
-    SessionApi getSessionApi();
+//    ApiClient getClient();
+//
+//    ProxyApi getProxyApi();
+//
+//    ServerApi getServerApi();
+//
+//    Server getServer();
+//
+//    PlayerApi getPlayerApi();
+//
+//    LoginApi getLoginApi();
+//
+//    SessionApi getSessionApi();
 
     CompletableFuture<Boolean> movePlayerToServer(UUID player, UUID server, boolean whitelist);
 

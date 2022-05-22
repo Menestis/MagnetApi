@@ -1,6 +1,6 @@
 package fr.blendman.magnet.api.server.events;
 
-import fr.blendman.skynet.models.ServerLoginPlayerInfo;
+import fr.blendman.magnet.api.server.ServerLoginPlayerInfo;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
