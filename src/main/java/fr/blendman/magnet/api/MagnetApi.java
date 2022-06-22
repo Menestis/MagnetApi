@@ -2,7 +2,9 @@ package fr.blendman.magnet.api;
 
 import fr.blendman.magnet.api.handles.messenger.MessengerHandle;
 import fr.blendman.magnet.api.handles.transactions.TransactionsHandle;
+import fr.blendman.magnet.api.server.Server;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
@@ -21,19 +23,7 @@ public interface MagnetApi {
 
     CompletableFuture<Integer> getPlayerCount();
 
-//    ApiClient getClient();
-//
-//    ProxyApi getProxyApi();
-//
-//    ServerApi getServerApi();
-//
-//    Server getServer();
-//
-//    PlayerApi getPlayerApi();
-//
-//    LoginApi getLoginApi();
-//
-//    SessionApi getSessionApi();
+    CompletableFuture<List<Server>> getAllServers();
 
     CompletableFuture<Boolean> movePlayerToServer(UUID player, UUID server, boolean whitelist);
 

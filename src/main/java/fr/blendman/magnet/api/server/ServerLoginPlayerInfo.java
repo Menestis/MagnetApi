@@ -7,29 +7,29 @@ import java.util.*;
  */
 public class ServerLoginPlayerInfo {
 
-    private UUID session;
+    private final UUID session;
 
-    private UUID proxy;
+    private final UUID proxy;
 
-    private String prefix;
+    private final String prefix;
 
-    private String suffix;
+    private final String suffix;
 
-    private String locale;
+    private final String locale;
 
-    private List<String> permissions = new ArrayList();
+    private final List<String> permissions;
 
-    private Integer power;
+    private final Integer power;
 
-    private Integer currency;
+    private final Integer currency;
 
-    private Integer premiumCurrency;
+    private final Integer premiumCurrency;
 
-    private List<UUID> blocked = new ArrayList();
+    private final List<UUID> blocked;
 
-    private Map<String, Integer> inventory = new HashMap();
+    private final Map<String, Integer> inventory;
 
-    private Map<String, String> properties = new HashMap();
+    private final Map<String, String> properties;
 
     public ServerLoginPlayerInfo(UUID session, UUID proxy, String prefix, String suffix, String locale, List<String> permissions, Integer power, Integer currency, Integer premiumCurrency, List<UUID> blocked, Map<String, Integer> inventory, Map<String, String> properties) {
         this.session = session;
