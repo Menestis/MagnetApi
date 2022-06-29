@@ -26,7 +26,7 @@ public abstract class MagnetNetworkEvent implements Serializable {
 
     public enum Target {
         DIRECT,
-        EVENTS;
+        EVENTS
 
     }
 }

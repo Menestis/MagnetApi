@@ -1,6 +1,6 @@
 package fr.blendman.magnet.api.server.events;
 
-import fr.blendman.magnet.api.server.ServerLoginPlayerInfo;
+import fr.blendman.magnet.api.server.players.ServerLoginPlayerInfo;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -21,19 +21,19 @@ public class PlayerInfoReadyEvent extends Event {
         this.reCache = reCache;
     }
 
+    public static HandlerList getHandlerList() {
+        return handlers;
+    }
+
     public ServerLoginPlayerInfo getInfo() {
         return info;
     }
 
-    public Player getPlayer(){
+    public Player getPlayer() {
         return player;
     }
 
     public @NotNull HandlerList getHandlers() {
-        return handlers;
-    }
-
-    public static HandlerList getHandlerList() {
         return handlers;
     }
 

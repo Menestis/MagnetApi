@@ -1,8 +1,9 @@
 package fr.blendman.magnet.api;
 
+import fr.blendman.magnet.api.handles.PlayerHandle;
+import fr.blendman.magnet.api.handles.TransactionsHandle;
 import fr.blendman.magnet.api.handles.messenger.MessengerHandle;
-import fr.blendman.magnet.api.handles.transactions.TransactionsHandle;
-import fr.blendman.magnet.api.server.ChatManager;
+import fr.blendman.magnet.api.server.chat.ChatManager;
 import fr.blendman.magnet.api.server.Server;
 
 import java.util.List;
@@ -22,17 +23,20 @@ public interface MagnetApi {
 
     ChatManager getChatManager();
 
+    PlayerHandle getPlayerHandle();
+
     UUID getServerId();
 
     CompletableFuture<Integer> getPlayerCount();
 
     CompletableFuture<List<Server>> getAllServers();
 
-    CompletableFuture<Boolean> movePlayerToServer(UUID player, UUID server, boolean whitelist);
-
-    CompletableFuture<Boolean> movePlayerToServer(UUID player, String serverKind);
-
+//    enum: ["Idle", "Waiting", "Starting", "Playing"]
     CompletableFuture<Void> setServerState(String state);
+
+    CompletableFuture<Void> setServerDescription(String description);
+
+    CompletableFuture<Void> sendWebhook(String name, String message);
 
     class MagnetStore {
         private static MagnetApi api;

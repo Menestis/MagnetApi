@@ -1,6 +1,8 @@
 package fr.blendman.magnet.api.server;
 
 
+import fr.blendman.magnet.api.server.players.ServerLoginPlayerInfo;
+
 import java.util.UUID;
 
 /**

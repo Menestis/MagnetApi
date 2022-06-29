@@ -1,6 +1,8 @@
-package fr.blendman.magnet.api.server;
+package fr.blendman.magnet.api.server.players;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 /**
  * @author Blendman974
@@ -31,7 +33,11 @@ public class ServerLoginPlayerInfo {
 
     private final Map<String, String> properties;
 
-    public ServerLoginPlayerInfo(UUID session, UUID proxy, String prefix, String suffix, String locale, List<String> permissions, Integer power, Integer currency, Integer premiumCurrency, List<UUID> blocked, Map<String, Integer> inventory, Map<String, String> properties) {
+    private final String discordId;
+
+    private final Mute mute;
+
+    public ServerLoginPlayerInfo(UUID session, UUID proxy, String prefix, String suffix, String locale, List<String> permissions, Integer power, Integer currency, Integer premiumCurrency, List<UUID> blocked, Map<String, Integer> inventory, Map<String, String> properties, String discordId, Mute mute) {
         this.session = session;
         this.proxy = proxy;
         this.prefix = prefix;
@@ -44,6 +50,8 @@ public class ServerLoginPlayerInfo {
         this.blocked = blocked;
         this.inventory = inventory;
         this.properties = properties;
+        this.discordId = discordId;
+        this.mute = mute;
     }
 
 
@@ -93,5 +101,13 @@ public class ServerLoginPlayerInfo {
 
     public Map<String, String> getProperties() {
         return properties;
+    }
+
+    public String getDiscordId() {
+        return discordId;
+    }
+
+    public Mute getMute() {
+        return mute;
     }
 }

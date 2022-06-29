@@ -1,4 +1,4 @@
-package fr.blendman.magnet.api.handles.transactions;
+package fr.blendman.magnet.api.handles;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
