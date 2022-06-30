@@ -7,6 +7,7 @@ import fr.blendman.magnet.api.server.chat.ChatManager;
 import fr.blendman.magnet.api.server.Server;
 
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
@@ -37,6 +38,8 @@ public interface MagnetApi {
     CompletableFuture<Void> setServerDescription(String description);
 
     CompletableFuture<Void> sendWebhook(String name, String message);
+
+    CompletableFuture<String> startServer(String nane, String kind, Map<String, String> properties);
 
     class MagnetStore {
         private static MagnetApi api;
