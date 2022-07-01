@@ -28,6 +28,8 @@ public interface MagnetApi {
 
     UUID getServerId();
 
+    String getServerLabel();
+
     CompletableFuture<Integer> getPlayerCount();
 
     CompletableFuture<List<Server>> getAllServers();
