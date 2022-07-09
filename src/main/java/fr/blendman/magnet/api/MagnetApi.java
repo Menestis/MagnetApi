@@ -3,7 +3,6 @@ package fr.blendman.magnet.api;
 import fr.blendman.magnet.api.handles.PlayerHandle;
 import fr.blendman.magnet.api.handles.TransactionsHandle;
 import fr.blendman.magnet.api.handles.messenger.MessengerHandle;
-import fr.blendman.magnet.api.server.chat.ChatManager;
 import fr.blendman.magnet.api.server.Server;
 
 import java.util.List;
@@ -21,8 +20,6 @@ public interface MagnetApi {
     MessengerHandle getMessenger();
 
     TransactionsHandle getTransactionHandle();
-
-    ChatManager getChatManager();
 
     PlayerHandle getPlayerHandle();
 
