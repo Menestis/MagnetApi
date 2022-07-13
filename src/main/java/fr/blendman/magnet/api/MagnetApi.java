@@ -34,6 +34,8 @@ public interface MagnetApi {
 //    enum: ["Idle", "Waiting", "Starting", "Playing"]
     CompletableFuture<Void> setServerState(String state);
 
+    Map<String, String> getProperties();
+
     CompletableFuture<Void> setServerDescription(String description);
 
     CompletableFuture<Void> sendWebhook(String name, String message);
