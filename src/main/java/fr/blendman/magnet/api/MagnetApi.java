@@ -44,7 +44,7 @@ public interface MagnetApi {
 
     CompletableFuture<String> startServer(String nane, String kind, Map<String, String> properties);
 
-    Leaderboard getLeaderboard(String name);
+    CompletableFuture<Leaderboard> getLeaderboard(String name);
 
     class MagnetStore {
         private static MagnetApi api;
