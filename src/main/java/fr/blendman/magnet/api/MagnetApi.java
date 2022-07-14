@@ -4,6 +4,7 @@ import fr.blendman.magnet.api.handles.PlayerHandle;
 import fr.blendman.magnet.api.handles.TransactionsHandle;
 import fr.blendman.magnet.api.handles.messenger.MessengerHandle;
 import fr.blendman.magnet.api.server.Server;
+import fr.blendman.magnet.api.server.leaderboards.Leaderboard;
 import fr.blendman.magnet.api.server.leaderboards.LeaderboardEntry;
 
 import java.util.List;
@@ -43,7 +44,7 @@ public interface MagnetApi {
 
     CompletableFuture<String> startServer(String nane, String kind, Map<String, String> properties);
 
-    List<LeaderboardEntry> getLeaderboard(String name);
+    Leaderboard getLeaderboard(String name);
 
     class MagnetStore {
         private static MagnetApi api;
