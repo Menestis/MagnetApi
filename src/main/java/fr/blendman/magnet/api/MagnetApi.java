@@ -46,6 +46,10 @@ public interface MagnetApi {
 
     CompletableFuture<Leaderboard> getLeaderboard(String name);
 
+    String getRegistryValue(String s);
+
+    void setRegistryValue(String k, String v);
+
     class MagnetStore {
         private static MagnetApi api;
 
