@@ -44,6 +44,8 @@ public interface MagnetApi {
 
     CompletableFuture<String> startServer(String nane, String kind, Map<String, String> properties);
 
+    CompletableFuture<Void> stopServer(String id);
+
     CompletableFuture<Leaderboard> getLeaderboard(String name);
 
     String getRegistryValue(String s);
