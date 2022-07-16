@@ -17,7 +17,7 @@ public interface ServerCacheHandler {
 
     void addWhitelist(UUID player);
 
-     ChatManager getChatManager();
+    ChatManager getChatManager();
 
     class ServerCacheHandlerStore {
         private static ServerCacheHandler serverCacheHandler;
