@@ -1,6 +1,7 @@
 package fr.blendman.magnet.api.server;
 
 
+import fr.blendman.magnet.api.server.chat.ChatManager;
 import fr.blendman.magnet.api.server.players.ServerLoginPlayerInfo;
 
 import java.util.UUID;
@@ -15,6 +16,8 @@ public interface ServerCacheHandler {
     boolean shouldBeWhitelisted(UUID uuid);
 
     void addWhitelist(UUID player);
+
+     ChatManager getChatManager();
 
     class ServerCacheHandlerStore {
         private static ServerCacheHandler serverCacheHandler;
