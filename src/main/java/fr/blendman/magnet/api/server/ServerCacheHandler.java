@@ -2,7 +2,7 @@ package fr.blendman.magnet.api.server;
 
 
 import fr.blendman.magnet.api.server.chat.ChatManager;
-import fr.blendman.magnet.api.server.players.ServerLoginPlayerInfo;
+import fr.blendman.skynet.models.ServerLoginPlayerInfo;
 
 import java.util.UUID;
 

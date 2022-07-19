@@ -1,5 +1,7 @@
 package fr.blendman.magnet.api.handles;
 
+import fr.blendman.skynet.models.PlayerInfo;
+
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
@@ -7,6 +9,8 @@ import java.util.concurrent.CompletableFuture;
  * @author Blendman974
  */
 public interface PlayerHandle {
+
+    CompletableFuture<PlayerInfo> getPlayerInfo(String player);
 
 //    enum: ["Ok", "Failed" , "PlayerOffline", "MissingServer" , "MissingServerKind", "UnlinkedPlayer"]
 
