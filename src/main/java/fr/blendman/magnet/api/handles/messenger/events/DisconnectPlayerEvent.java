@@ -11,10 +11,12 @@ import java.util.UUID;
 public class DisconnectPlayerEvent extends MagnetNetworkEvent {
     public final transient UUID proxy;
     public final UUID player;
+    public final String message;
 
-    public DisconnectPlayerEvent(UUID proxy, UUID player) {
+    public DisconnectPlayerEvent(UUID proxy, UUID player, String message) {
         super(Target.DIRECT, proxy.toString());
         this.proxy = proxy;
         this.player = player;
+        this.message = message;
     }
 }
