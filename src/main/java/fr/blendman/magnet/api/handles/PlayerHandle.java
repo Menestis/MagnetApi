@@ -1,6 +1,8 @@
 package fr.blendman.magnet.api.handles;
 
 import fr.blendman.skynet.models.PlayerInfo;
+import fr.blendman.skynet.models.PlayerSanction;
+import fr.blendman.skynet.models.PlayerSanctionResult;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -17,4 +19,6 @@ public interface PlayerHandle {
     CompletableFuture<String> movePlayerToServer(UUID player, UUID server, boolean whitelist);
 
     CompletableFuture<String> movePlayerToServer(UUID player, String serverKind);
+
+    CompletableFuture<PlayerSanctionResult> sanctionPlayer(UUID player, String category);
 }
