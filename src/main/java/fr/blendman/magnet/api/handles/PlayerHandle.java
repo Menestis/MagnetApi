@@ -20,5 +20,5 @@ public interface PlayerHandle {
 
     CompletableFuture<String> movePlayerToServer(UUID player, String serverKind);
 
-    CompletableFuture<PlayerSanctionResult> sanctionPlayer(UUID player, String category);
+    CompletableFuture<PlayerSanctionResult> sanctionPlayer(UUID player, String category, UUID issuer, boolean unsanction);
 }
