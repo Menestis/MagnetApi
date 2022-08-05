@@ -1,6 +1,7 @@
 package fr.blendman.magnet.api.server;
 
 
+import fr.blendman.magnet.api.handles.EchoHandle;
 import fr.blendman.magnet.api.server.chat.ChatManager;
 import fr.blendman.skynet.models.ServerLoginPlayerInfo;
 
@@ -18,6 +19,8 @@ public interface ServerCacheHandler {
     void addWhitelist(UUID player);
 
     ChatManager getChatManager();
+
+    EchoHandle getEchoHandle();
 
     class ServerCacheHandlerStore {
         private static ServerCacheHandler serverCacheHandler;

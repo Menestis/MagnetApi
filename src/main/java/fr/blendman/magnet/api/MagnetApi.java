@@ -1,5 +1,6 @@
 package fr.blendman.magnet.api;
 
+import fr.blendman.magnet.api.handles.EchoHandle;
 import fr.blendman.magnet.api.handles.PlayerHandle;
 import fr.blendman.magnet.api.handles.TransactionsHandle;
 import fr.blendman.magnet.api.handles.messenger.MessengerHandle;
