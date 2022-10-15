@@ -21,6 +21,7 @@ public interface PlayerHandle {
 
     CompletableFuture<UUID> getPlayerUUID(String player);
 
-
     CompletableFuture<PlayerSanctionResult> sanctionPlayer(UUID player, String category, UUID issuer, boolean unsanction);
+
+    CompletableFuture<Void> setPlayerProperties(UUID player, String key, String value);
 }

@@ -20,8 +20,13 @@ public interface EchoHandle {
 
     void setBroadcast(UUID player, boolean broadcast);
 
+    void startVirtualAudio(UUID id, String audio, double[] position, String world, boolean broadcast);
+
+    void stopVirtualAudio(UUID id);
+
+    //    void setPlayerWorld(UUID player, boolean serverMuted, boolean serverDeafened, boolean broadcast); //todo
+
     void setWorld(UUID player, String world);
-//    void setPlayerWorld(UUID player, boolean serverMuted, boolean serverDeafened, boolean broadcast); //todo
 
     void addEchoEventListener(String name, BiConsumer<UUID, EchoEvent> listener);
 
@@ -80,6 +85,17 @@ public interface EchoHandle {
 
         public void setServerMuted(boolean serverMuted) {
             this.serverMuted = serverMuted;
+        }
+
+        @Override
+        public String toString() {
+            return "EchoPlayerStatus{" +
+                    "muted=" + muted +
+                    ", serverMuted=" + serverMuted +
+                    ", deafen=" + deafen +
+                    ", serverDeafen=" + serverDeafen +
+                    ", connected=" + connected +
+                    '}';
         }
     }
 }
