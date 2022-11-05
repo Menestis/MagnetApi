@@ -34,9 +34,6 @@ public interface MagnetApi {
 
     CompletableFuture<List<Server>> getAllServers();
 
-//    enum: ["Idle", "Waiting", "Starting", "Playing"]
-    CompletableFuture<Void> setServerState(String state);
-
     Map<String, String> getProperties();
 
     CompletableFuture<Void> setServerDescription(String description);

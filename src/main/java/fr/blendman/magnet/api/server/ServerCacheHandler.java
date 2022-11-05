@@ -6,6 +6,7 @@ import fr.blendman.magnet.api.server.chat.ChatManager;
 import fr.blendman.skynet.models.ServerLoginPlayerInfo;
 
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @author Blendman974
@@ -21,6 +22,9 @@ public interface ServerCacheHandler {
     ChatManager getChatManager();
 
     EchoHandle getEchoHandle();
+
+    //    enum: ["Idle", "Waiting", "Starting", "Playing"]
+    CompletableFuture<Void> setServerState(String state);
 
     class ServerCacheHandlerStore {
         private static ServerCacheHandler serverCacheHandler;
