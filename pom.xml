@@ -72,9 +72,9 @@
 
     <distributionManagement>
         <repository>
-            <id>aspaku</id>
-            <name>Aspaku Maven</name>
-            <url>https://nexus.aspaku.com/repository/maven/</url>
+            <id>UndefinedDev</id>
+            <name>UndefinedDev</name>
+            <url>https://nexus.undefined-dev.fr/repository/maven/</url>
         </repository>
     </distributionManagement>
 
@@ -83,6 +83,10 @@
             <name>jcenter</name>
             <id>bintray-jcenter</id>
             <url>https://jcenter.bintray.com</url>
+        </repository>
+        <repository>
+            <id>UndefinedDev</id>
+            <url>https://nexus.undefined-dev.fr/repository/maven/</url>
         </repository>
         <repository>
             <id>spigot-repo</id>
@@ -97,7 +101,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <version>1.19.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
